@@ -41,45 +41,43 @@ class LoginView extends GetView<LoginController> {
                         color: Colors.black,
                       ),
                       children: [
+                        // refactor
                         TextSpan(
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                print("Términos");
-                              },
-                            text: "términos",
-                            style: TextStyle(
-                              color: Colors.red,
-                            ),
-                            children: [
-                              TextSpan(
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      print("Condiciones");
-                                    },
-                                  text: ", condiciones ",
-                                  style: TextStyle(
-                                    color: Colors.red,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                        recognizer: TapGestureRecognizer()
-                                          ..onTap = () {
-                                            print("Privacidad");
-                                          },
-                                        text: "y privacidad ",
-                                        style: TextStyle(
-                                          color: Colors.red,
-                                        ),
-                                        children: [
-                                          TextSpan(
-                                            text: "de uso. ",
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                        ]),
-                                  ]),
-                            ]),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              print("Términos");
+                            },
+                          text: "términos",
+                          style: TextStyle(
+                            color: Colors.red,
+                          ),
+                        ),
+                        TextSpan(
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              print("Condiciones");
+                            },
+                          text: ", condiciones ",
+                          style: TextStyle(
+                            color: Colors.red,
+                          ),
+                        ),
+                        TextSpan(
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              print("Privacidad");
+                            },
+                          text: "y privacidad ",
+                          style: TextStyle(
+                            color: Colors.red,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "de uso. ",
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
                       ]),
                 ),
               ),
