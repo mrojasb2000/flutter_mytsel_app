@@ -66,7 +66,7 @@ class LoginView extends GetView<LoginController> {
                                           ..onTap = () {
                                             print("Privacidad");
                                           },
-                                        text: "privacidad ",
+                                        text: "y privacidad ",
                                         style: TextStyle(
                                           color: Colors.red,
                                         ),
