@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -26,32 +27,41 @@ class LoginView extends GetView<LoginController> {
               hintText: "Cth. 08129011xxxx",
             ),
           ),
-          CheckboxListTile(
-            value: false,
-            onChanged: (value) {},
-            controlAffinity: ListTileControlAffinity.leading,
-            title: RichText(
-              text: TextSpan(
-                  text: "Acepto los  ",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-                  children: [
-                    TextSpan(
-                        text: "términos, condiciones y privacidad ",
-                        style: TextStyle(
-                          color: Colors.red,
-                        ),
-                        children: [
-                          TextSpan(
-                            text: "de ACME INC. ",
+          Row(
+            children: [
+              Checkbox(
+                value: false,
+                onChanged: (value) {},
+              ),
+              Expanded(
+                child: RichText(
+                  text: TextSpan(
+                      text: "Acepto los  ",
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                      children: [
+                        TextSpan(
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                print("Términos y condiciones");
+                              },
+                            text: "términos, condiciones y privacidad ",
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.red,
                             ),
-                          ),
-                        ]),
-                  ]),
-            ),
+                            children: [
+                              TextSpan(
+                                text: "de uso. ",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ]),
+                      ]),
+                ),
+              ),
+            ],
           )
         ],
       ),
