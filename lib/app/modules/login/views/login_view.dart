@@ -44,19 +44,41 @@ class LoginView extends GetView<LoginController> {
                         TextSpan(
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                                print("Términos y condiciones");
+                                print("Términos");
                               },
-                            text: "términos, condiciones y privacidad ",
+                            text: "términos",
                             style: TextStyle(
                               color: Colors.red,
                             ),
                             children: [
                               TextSpan(
-                                text: "de uso. ",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                ),
-                              ),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      print("Condiciones");
+                                    },
+                                  text: ", condiciones ",
+                                  style: TextStyle(
+                                    color: Colors.red,
+                                  ),
+                                  children: [
+                                    TextSpan(
+                                        recognizer: TapGestureRecognizer()
+                                          ..onTap = () {
+                                            print("Privacidad");
+                                          },
+                                        text: "privacidad ",
+                                        style: TextStyle(
+                                          color: Colors.red,
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: "de uso. ",
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                        ]),
+                                  ]),
                             ]),
                       ]),
                 ),
