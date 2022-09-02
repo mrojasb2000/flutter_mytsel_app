@@ -119,6 +119,9 @@ class LoginView extends GetView<LoginController> {
                   ],
                 ),
                 style: ButtonStyle(
+                    fixedSize: MaterialStateProperty.all(
+                      Size(150, 50),
+                    ),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(4.0)),
@@ -147,6 +150,9 @@ class LoginView extends GetView<LoginController> {
                   ],
                 ),
                 style: ButtonStyle(
+                    fixedSize: MaterialStateProperty.all(
+                      Size(150, 50),
+                    ),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(4.0)),
