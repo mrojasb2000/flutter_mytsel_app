@@ -12,8 +12,16 @@ class LoginView extends GetView<LoginController> {
     return Scaffold(
       body: ListView(
         children: [
-          Image.asset(
-            "assets/logo/logo-login.png",
+          Container(
+            alignment: Alignment.centerLeft,
+            height: 150,
+            child: Image.asset(
+              "assets/logo/logo-login.png",
+              fit: BoxFit.contain,
+            ),
+          ),
+          SizedBox(
+            height: 30,
           ),
           Text(
             "Por favor ingrese con su número de Teléfono",
