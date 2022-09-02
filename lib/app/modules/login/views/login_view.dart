@@ -82,6 +82,79 @@ class LoginView extends GetView<LoginController> {
                 ),
               ),
             ],
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text(
+              "INGRESAR",
+              style: TextStyle(
+                color: Color(0xFF747D8C),
+              ),
+            ),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.grey[300],
+            ),
+          ),
+          Center(
+            child: Text("O inicia sesión usando"),
+          ),
+          Row(
+            children: [
+              OutlinedButton(
+                onPressed: () {},
+                child: Row(
+                  children: [
+                    Image.asset("assets/icons/facebook-icons.png"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "Facebook",
+                      style: TextStyle(
+                        color: Color(0xFF3B5998),
+                      ),
+                    ),
+                  ],
+                ),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4.0)),
+                    ),
+                    side: MaterialStateProperty.all(
+                      BorderSide(
+                        color: Color(0xFF3B5998),
+                      ),
+                    )),
+              ),
+              OutlinedButton(
+                onPressed: () {},
+                child: Row(
+                  children: [
+                    Image.asset("assets/icons/twitter-icons.png"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      "Twitter",
+                      style: TextStyle(
+                        color: Color(0xFF1DA1F2),
+                      ),
+                    ),
+                  ],
+                ),
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4.0)),
+                    ),
+                    side: MaterialStateProperty.all(
+                      BorderSide(
+                        color: Color(0xFF1DA1F2),
+                      ),
+                    )),
+              ),
+            ],
           )
         ],
       ),
