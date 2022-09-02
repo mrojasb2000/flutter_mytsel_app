@@ -99,10 +99,12 @@ class LoginView extends GetView<LoginController> {
             child: Text("O inicia sesión usando"),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               OutlinedButton(
                 onPressed: () {},
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset("assets/icons/facebook-icons.png"),
                     SizedBox(
@@ -130,6 +132,7 @@ class LoginView extends GetView<LoginController> {
               OutlinedButton(
                 onPressed: () {},
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset("assets/icons/twitter-icons.png"),
                     SizedBox(
