@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
@@ -58,6 +59,9 @@ class LoginView extends GetView<LoginController> {
                 border: OutlineInputBorder(),
                 hintText: "CL. +56 9 12345xxxx",
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             Row(
               children: [
@@ -118,8 +122,11 @@ class LoginView extends GetView<LoginController> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 30,
+            ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Get.offAllNamed(Routes.HOME),
               child: Text(
                 "INGRESAR",
                 style: TextStyle(
@@ -128,10 +135,17 @@ class LoginView extends GetView<LoginController> {
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.grey[300],
+                fixedSize: Size(150, 50),
               ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             Center(
               child: Text("O inicia sesión usando"),
+            ),
+            SizedBox(
+              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
