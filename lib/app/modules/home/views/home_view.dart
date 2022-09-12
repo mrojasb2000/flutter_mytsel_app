@@ -30,6 +30,9 @@ class HomeView extends GetView<HomeController> {
             ],
           ),
         ),
+        actions: [
+          Image.asset("assets/icons/qr.png"),
+        ],
       ),
       body: Stack(
         children: [
